@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Measure download speed by making sequential requests to a URL."""
-
 from __future__ import annotations
 
 import argparse
@@ -23,7 +20,6 @@ class Measurement:
 
 
 def download_once(url: str, timeout: float) -> Measurement:
-	"""Download the complete response and return its duration and size."""
 	request = Request(url, headers={"User-Agent": "sobes-speed-test/1.0"})
 	started_at = time.perf_counter()
 	downloaded_bytes = 0
@@ -39,7 +35,6 @@ def download_once(url: str, timeout: float) -> Measurement:
 
 
 def format_bytes(value: float) -> str:
-	"""Format bytes using decimal units suitable for network speed output."""
 	return f"{value / 1_000_000:.2f} MB"
 
 
