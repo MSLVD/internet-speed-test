@@ -23,16 +23,3 @@ python3 sobes.py URL --requests 10 --timeout 30
 ```
 
 Для честного измерения выбирайте большой файл на сервере, который находится далеко от локального кэша, и не запускайте параллельные загрузки. Скрипт хранит только текущий блок ответа, поэтому файл целиком в память не загружается.
-
-## Публикация на GitHub
-
-Создайте пустой репозиторий на GitHub, затем выполните в этой папке:
-
-```bash
-git init
-git add sobes.py README.md
-git commit -m "Add internet speed measurement script"
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
-git push -u origin main
-```
